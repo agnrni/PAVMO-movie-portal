@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #211817;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 45px 6%;
+    scroll-margin-top: 20px;
+}
+
+body > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 6%;
+    background-color: #542D2B;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f08080;
+}
+
+#Beranda {  
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+#Beranda h2 {
+    font-size: 36px;
+}
+
+#Beranda p {
+    color: #E8DCDC;
+}
+
+.movie-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.movies {
+    background-color: #382321;
+    border: 1px solid #68403C;
+    border-radius: 20px;
+    padding: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.movies:hover {
+    transform: translateY(-5px);
+    border-color: #A8323B;
+}
+
+.movies img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+    height: auto;
+    border-radius: 7px;
+    margin-bottom: 12px;
+}
+
+.movies h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.movies p {
+    font-size: 14px;
+    color: #d8c9c7;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #8B2028;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b8323d;
+}
+
+.movies button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.genre-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.genre-item {
+    background-color: #542D2B;
+    border: 1px solid #684068;
+    border-radius: 10px;
+    padding: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.genre-item:hover {
+    background-color: #71352F;
+}
+
+.genre-item h3 {
+    margin-bottom: 8px;
+}
+
+.genre-item p {
+    color: #E8DCDC;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.watchlist-item {
+     background-color: #382321;
+    border: 1px solid #68403C;
+    border-left: 4px solid #8B2028;
+    border-radius: 7px;
+    padding: 15px 20px;
+    margin-top: 15px;
+}
+
+.watchlist-item h3 {
+    margin-bottom: 5px;
+}
+
+.watchlist-item p {
+    color: #D8C9C7;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+#Profil {
+    background-color: #382321;
+}
+
+#Profil h2,
+#Profil > p {
+    text-align: center;
+}
+
+#Profil form {
+    max-width: 450px;
+    margin: 25px auto 0;
+}
+
+#Profil fieldset {
+    width: 100% !important;
+    border: 1px solid #8B5550;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#Profil label {
+    font-size: 14px;
+}
+
+#Profil input[type="text"],
+#Profil input[type="email"],
+#Profil input[type="password"] {
+    width: 100%;
+    padding: 11px;
+    margin-top: 7px;
+    background-color: #211817;
+    color: #FFFFFF;
+    border: 1px solid #68403C;
+    border-radius: 5px;
+}
+
+#Profil input:focus {
+    outline: 2px solid #A8323B;
+}
+
+#Profil input[type="checkbox"] {
+    accent-color: #8B2028;
+}
+
+#Profil form button {
+    width: 100%;
+}
+
+
+/* =================================
+   9. FOOTER
+================================= */
+
+footer {
+    background-color: #542D2B;
+    padding: 18px;
+    text-align: center;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* =================================
+   10. RESPONSIVE / TAMPILAN HP
+================================= */
+
+@media (max-width: 768px) {
+
+    body > div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+
+    #Beranda h2 {
+        font-size: 28px;
+    }
+
+    .movie-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+
+    .movie-card {
+        grid-template-columns: 1fr;
+    }
+}
